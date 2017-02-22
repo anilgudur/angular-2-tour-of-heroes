@@ -11,7 +11,7 @@ v1-tutorial: Tutorial - Tour of Heroes
 	96e919a	v1-tutorial-step-1		"The Hero Editor"
 	f50f8a6 v1-tutorial-step-2		"Master/Detail"
 	014352c v1-tutorial-step-3		"Multiple Components"
-	014352c v1-tutorial-step-5		"Services"
+	7bcf971 v1-tutorial-step-5		"Services"
 
 -----
 

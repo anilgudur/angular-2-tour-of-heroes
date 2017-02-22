@@ -16,7 +16,7 @@ export class HeroService {
         return new Promise(
             resolve => {
                 // Simulate server latency with 2 second display
-                setTimeout(() => resolve(this.getHeroes()), 10000);
+                setTimeout(() => resolve(this.getHeroes()), 2000);
             }
         );
     }
