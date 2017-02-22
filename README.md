@@ -13,7 +13,7 @@ v1-tutorial: Tutorial - Tour of Heroes
 	014352c v1-tutorial-step-3		"Multiple Components"
 	7bcf971 v1-tutorial-step-5		"Services"
 	8bb1eb6 v1-tutorial-step-6.1	"Routing - Before Navigate to Hero Details"
-
+	39a6739 v1-tutorial-step-6.2	"Routing - Before Select a Dashboard Hero"
 -----
 
 End: Tags
