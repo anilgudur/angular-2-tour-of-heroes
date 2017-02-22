@@ -10,6 +10,8 @@ v1-tutorial: Tutorial - Tour of Heroes
 	55369af	v1-tutorial-step-0.1	"Before including FormsModule and use ngModel for two way data binding"
 	96e919a	v1-tutorial-step-1		"The Hero Editor"
 	f50f8a6 v1-tutorial-step-2		"Master/Detail"
+	014352c v1-tutorial-step-3		"Multiple Components"
+	014352c v1-tutorial-step-5		"Services"
 
 -----
 
