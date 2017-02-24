@@ -16,27 +16,49 @@ var HeroesComponent = (function () {
         this.router = router;
         this.heroService = heroService;
     }
-    HeroesComponent.prototype.getHeroes = function () {
-        this.heroes = this.heroService.getHeroes();
-    };
+    // getHeroes(): void {
+    //     this.heroes = this.heroService.getHeroes();
+    // }
     HeroesComponent.prototype.getHeroesPromise = function () {
         var _this = this;
         this.heroService.getHeroesPromise().then(function (heroes) { return _this.heroes = heroes; });
     };
-    HeroesComponent.prototype.getHeroesPromiseSlowly = function () {
-        var _this = this;
-        this.heroService.getHeroesPromiseSlowly().then(function (heroes) { return _this.heroes = heroes; });
-    };
+    // getHeroesPromiseSlowly(): void {
+    //     this.heroService.getHeroesPromiseSlowly().then(heroes => this.heroes = heroes);
+    // }
     HeroesComponent.prototype.ngOnInit = function () {
         //this.getHeroes();
         //this.getHeroesPromise();
-        this.getHeroesPromiseSlowly();
+        this.getHeroesPromise();
     };
     HeroesComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
     };
     HeroesComponent.prototype.gotoDetail = function () {
         this.router.navigate(['/detail', this.selectedHero.id]);
+    };
+    HeroesComponent.prototype.add = function (name) {
+        var _this = this;
+        name = name.trim();
+        if (!name) {
+            return;
+        }
+        this.heroService.create(name)
+            .then(function (hero) {
+            _this.heroes.push(hero);
+            _this.selectedHero = null;
+        });
+    };
+    HeroesComponent.prototype.delete = function (hero) {
+        var _this = this;
+        this.heroService
+            .delete(hero.id)
+            .then(function () {
+            _this.heroes = _this.heroes.filter(function (h) { return h !== hero; });
+            if (_this.selectedHero === hero) {
+                _this.selectedHero = null;
+            }
+        });
     };
     HeroesComponent = __decorate([
         core_1.Component({
