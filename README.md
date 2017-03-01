@@ -15,6 +15,7 @@ v1-tutorial: Tutorial - Tour of Heroes
 	8bb1eb6 v1-tutorial-step-6.1	"Routing - Before - Navigate to Hero Details"
 	39a6739 v1-tutorial-step-6.2	"Routing - Before - Select a Dashboard Hero"
 	9850965 v1-tutorial-step-6.3	"Routing - Before - Select a Hero in the HeroesComponent"
+	b23fa8d v1-tutorial-step-6		"Routing"
 -----
 
 End: Tags
